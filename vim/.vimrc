@@ -97,6 +97,10 @@ let g:syntastic_check_on_wq = 0
 " Python 3 Support Syntastic
 let g:syntastic_python_python_exec = '/usr/bin/python3'
 
+" SemiStandardJS Linter
+let g:syntastic_javascript_checkers=['standard']
+let g:syntastic_javascript_standard_exec = 'semistandard'
+
 " Extended fonts
 let g:airline_powerline_fonts = 1
 
