@@ -34,6 +34,12 @@ Plugin 'rip-rip/clang_complete'
 Plugin 'zyedidia/vim-snake'
 " Snake game
 
+Plugin 'pangloss/vim-javascript'
+" JavaScript Syntax Highlighting
+
+Plugin 'MaxMEllon/vim-jsx-pretty'
+" React Syntax Highlighting
+
 call vundle#end()            
 filetype plugin indent on   
 
