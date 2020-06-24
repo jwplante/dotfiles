@@ -2,9 +2,9 @@
 " jwplante's Minimal Vimrc for getting
 " stuff done.
 " (jplante@wpi.edu)
-"------------------------------------------
+"------------------------------------------ 
 
-" Vundle
+" Vundle 
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -40,18 +40,26 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'MaxMEllon/vim-jsx-pretty'
 " React Syntax Highlighting
 
+Plugin 'leafgarland/typescript-vim'
+" TypeScript Syntax Highlighting
+
 call vundle#end()            
 filetype plugin indent on   
 
 set exrc
 set secure
 
-" Basic formatting
+" Basic default formatting
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
-set noexpandtab
+set expandtab
 set encoding=utf-8
+
+" Custom formatting for JS and CSS
+autocmd Filetype javascript,css setlocal tabstop=2
+autocmd Filetype javascript,css setlocal softtabstop=2
+autocmd Filetype javascript,css setlocal shiftwidth=2 
 
 " Set relative line numbers
 set relativenumber
