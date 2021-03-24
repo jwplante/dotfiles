@@ -19,20 +19,17 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 " Automatic syntax checking
 
-Plugin 'ajmwagar/vim-deus'
-" Deus Color Theme
+Plugin 'puremourning/vimspector'
+" General debugger C/Python/Go/etc.
 
-Plugin 'lifepillar/vim-solarized8'
-" Solarized Color Theme
+Plugin 'NLKNguyen/papercolor-theme'
+" Paper Color Theme
 
 Plugin 'bling/vim-airline'
 " Airline Plugin
 
 Plugin 'rip-rip/clang_complete'
 " Clang C\C++ Autocomplete
-
-Plugin 'zyedidia/vim-snake'
-" Snake game
 
 Plugin 'pangloss/vim-javascript'
 " JavaScript Syntax Highlighting
@@ -42,6 +39,9 @@ Plugin 'MaxMEllon/vim-jsx-pretty'
 
 Plugin 'leafgarland/typescript-vim'
 " TypeScript Syntax Highlighting
+
+Plugin 'fatih/vim-go'
+" Go Support
 
 call vundle#end()            
 filetype plugin indent on   
@@ -86,11 +86,11 @@ noremap H gT
 noremap L gt
 
 " Color Scheme
-colors deus
+set background=dark
+colorscheme PaperColor
 
 " Set the lines up to 80 characters.
 set colorcolumn=80
-highlight ColorColumn ctermbg=darkgrey
 
 " Syntastic settings
 set statusline+=%#warningmsg#
@@ -101,6 +101,7 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+let g:syntastic_cpp_compiler = "g++"
 
 " Python 3 Support Syntastic
 let g:syntastic_python_python_exec = '/usr/bin/python3'
@@ -120,4 +121,3 @@ let g:clang_library_path='/usr/lib/llvm-8/lib/libclang.so.1'
 
 " Enable automatic spellchecking
 " set spell spelllang=en_us
-
