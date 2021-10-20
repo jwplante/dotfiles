@@ -1,0 +1,14 @@
+# ZSH environment vars
+
+XDG_CONFIG_HOME="$HOME/.config"
+XDG_DATA_HOME="$XDG_CONFIG_HOME/local/share"
+XDG_CACHE_HOME="$XDG_CONFIG_HOME/cache"
+
+ZDOTDIR="$XDG_CONFIG_HOME/zsh"
+
+EDITOR="vim"
+VISUAL="vim"
+
+HISTFILE=~/.histfile
+HISTSIZE=1000
+SAVEHIST=1000

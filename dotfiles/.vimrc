@@ -28,9 +28,6 @@ Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'bling/vim-airline'
 " Airline Plugin
 
-Plugin 'rip-rip/clang_complete'
-" Clang C\C++ Autocomplete
-
 Plugin 'pangloss/vim-javascript'
 " JavaScript Syntax Highlighting
 
@@ -112,12 +109,6 @@ let g:syntastic_javascript_standard_exec = 'semistandard'
 
 " Extended fonts
 let g:airline_powerline_fonts = 1
-
-" Disable preview window in clang_complete
-set completeopt-=preview
-
-" path to directory where library can be found
-let g:clang_library_path='/usr/lib/llvm-8/lib/libclang.so.1'
 
 " Enable automatic spellchecking
 " set spell spelllang=en_us
