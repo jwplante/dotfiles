@@ -1,5 +1,5 @@
 # zsh config
-# jwplante
+# James Plante (jwplante)
 
 # Lines configured by zsh-newuser-install
 setopt autocd extendedglob nomatch notify
@@ -15,6 +15,7 @@ compinit
 
 #
 # Prompt
+# Adapted from here: https://medium.com/@dpeachesdev/intro-to-zsh-without-oh-my-zsh-part-1-c039de5ee22e
 #
 PROMPT='%F{cyan}%n%f in %F{13}%~%f -> '
 
