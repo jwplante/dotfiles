@@ -4,43 +4,36 @@
 " (jplante@wpi.edu)
 "------------------------------------------ 
 
-" Vundle 
-set nocompatible              " be iMproved, required
-filetype off                  " required
+" Plugins
+call plug#begin()
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
+Plug 'tpope/vim-surround'
+" Surround Plugin
 
-Plugin 'scrooloose/nerdtree'
-" NERDTREE Plugin for interactive file manager.
+Plug 'tpope/vim-fugitive'
+" Git Plugin
 
-Plugin 'scrooloose/syntastic'
-" Automatic syntax checking
+Plug 'scrooloose/nerdtree'
+" NERDTREE Plug for interactive file manager.
 
-Plugin 'puremourning/vimspector'
+Plug 'puremourning/vimspector'
 " General debugger C/Python/Go/etc.
 
-Plugin 'NLKNguyen/papercolor-theme'
-" Paper Color Theme
+Plug 'bignimbus/pop-punk.vim'
+" Current Color theme
 
-Plugin 'bling/vim-airline'
-" Airline Plugin
+Plug 'itchyny/lightline.vim'
+" Lightline Bottom Bar
 
-Plugin 'pangloss/vim-javascript'
-" JavaScript Syntax Highlighting
+Plug 'prabirshrestha/vim-lsp'
+Plug 'mattn/vim-lsp-settings'
+" LSP Support
 
-Plugin 'MaxMEllon/vim-jsx-pretty'
-" React Syntax Highlighting
+Plug 'prabirshrestha/asyncomplete.vim'
+Plug 'prabirshrestha/asyncomplete-lsp.vim'
+" Autocomplete
+call plug#end()
 
-Plugin 'leafgarland/typescript-vim'
-" TypeScript Syntax Highlighting
-
-Plugin 'fatih/vim-go'
-" Go Support
-
-call vundle#end()            
 filetype plugin indent on   
 
 set exrc
@@ -84,31 +77,12 @@ noremap L gt
 
 " Color Scheme
 set background=dark
-colorscheme PaperColor
+colorscheme pop-punk
 
-" Set the lines up to 80 characters.
-set colorcolumn=80
-
-" Syntastic settings
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_cpp_compiler = "g++"
-
-" Python 3 Support Syntastic
-let g:syntastic_python_python_exec = '/usr/bin/python3'
-
-" SemiStandardJS Linter
-let g:syntastic_javascript_checkers=['standard']
-let g:syntastic_javascript_standard_exec = 'semistandard'
-
-" Extended fonts
-let g:airline_powerline_fonts = 1
+" Set the lines up to 100 characters.
+set colorcolumn=100
 
 " Enable automatic spellchecking
-" set spell spelllang=en_us
+set spell spelllang=en_us
+
+set laststatus=2
